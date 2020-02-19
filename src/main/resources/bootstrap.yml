@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: articles-service
+  cloud:
+    config:
+      uri: http://${CONFIG_SERVICE:localhost}:${CONFIG_PORT:8888}
+      fail-fast: true
+      username: ${CONFIG_SERVICE_USER:dummy}
+      password: ${CONFIG_SERVICE_PASSWORD:dummy}
+
